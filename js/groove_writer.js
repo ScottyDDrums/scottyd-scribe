@@ -2103,7 +2103,9 @@ function GrooveWriter() {
               num_notes_for_swing,
               swing_percentage,
               class_num_beats_per_measure,
-              class_note_value_per_measure
+              class_note_value_per_measure,
+              Kick2_Array,
+              Cymbal_Array
             );
           }
         }
@@ -2139,7 +2141,9 @@ function GrooveWriter() {
               num_notes_for_swing,
               swing_percentage,
               class_num_beats_per_measure,
-              class_note_value_per_measure
+              class_note_value_per_measure,
+              Kick2_Array,
+              Cymbal_Array
             );
           }
         }
@@ -2165,7 +2169,9 @@ function GrooveWriter() {
           num_notes_for_swing,
           swing_percentage,
           class_num_beats_per_measure,
-          class_note_value_per_measure
+          class_note_value_per_measure,
+          Kick2_Array,
+          Cymbal_Array
         );
 
         for (i = 1; i < class_number_of_measures; i++) {
@@ -2174,6 +2180,8 @@ function GrooveWriter() {
           HH_Array = get_empty_note_array_in_32nds();
           Snare_Array = get_empty_note_array_in_32nds();
           Kick_Array = get_empty_note_array_in_32nds();
+          Kick2_Array = get_empty_note_array_in_32nds();
+          Cymbal_Array = get_empty_note_array_in_32nds();
           Toms_Array = [
             get_empty_note_array_in_32nds(),
             get_empty_note_array_in_32nds(),
@@ -2188,7 +2196,9 @@ function GrooveWriter() {
             Snare_Array,
             Kick_Array,
             Toms_Array,
-            class_notes_per_measure * i
+            class_notes_per_measure * i,
+            Kick2_Array,
+            Cymbal_Array
           );
           muteArrayFromClickableUI(
             Sticking_Array,
@@ -2196,7 +2206,9 @@ function GrooveWriter() {
             Snare_Array,
             Kick_Array,
             Toms_Array,
-            i
+            i,
+            Kick2_Array,
+            Cymbal_Array
           );
 
           root.myGrooveUtils.MIDI_from_HH_Snare_Kick_Arrays(
@@ -2211,7 +2223,9 @@ function GrooveWriter() {
             num_notes_for_swing,
             swing_percentage,
             class_num_beats_per_measure,
-            class_note_value_per_measure
+            class_note_value_per_measure,
+            Kick2_Array,
+            Cymbal_Array
           );
         }
         break;
